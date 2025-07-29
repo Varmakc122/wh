@@ -21,38 +21,41 @@ router.get("/admin-panel", (req, res) => {
   }
 });
 router.post("/regist-entrance", (req, res) => {
-  const uaString = req.headers['user-agent'] || '';
+  const uaString = req.headers["user-agent"] || "";
   const parser = new UAParser.UAParser(uaString);
   const result = parser.getResult();
   const currentDate = new Date();
+  function pad(n) {
+    return n < 10 ? "0" + n : n;
+  }
   const Year = currentDate.getFullYear();
-  const month = currentDate.getMonth() + 1;
-  const day = currentDate.getDate();
-  const hour = currentDate.getHours();
-  const minute = currentDate.getMinutes();
-  const seconds = currentDate.getSeconds();
-  const timeOfActivation = `${Year}/${month}/${day}  ${hour}:${minute}:${seconds}`;
+  const Month = pad(currentDate.getMonth() + 1);
+  const day = pad(currentDate.getDate());
+  const hour = pad(currentDate.getHours());
+  const minute = pad(currentDate.getMinutes());
+  const seconds = pad(currentDate.getSeconds());
+  const timeOfActivation = `${Year}/${Month}/${day}  ${hour}:${minute}:${seconds}`;
 
   entranceLog.push({
-    device: result.device,       // тип и модель устройства
-    os: result.os,               // операционная система
-    browser: result.browser,     // браузер
-    originalUA: uaString,        // исходная строка
-    timeOfActivation
-  })
+    device: result.device, // тип и модель устройства
+    os: result.os, // операционная система
+    browser: result.browser, // браузер
+    originalUA: uaString, // исходная строка
+    timeOfActivation,
+  });
   res.status(200).send("Entrance logged successfully");
 });
 router.get("/get-entrance", (req, res) => {
   try {
     if (isOpenScript) {
-      res.send(JSON.stringify({entranceLog}));
+      res.send(JSON.stringify({ entranceLog }));
     } else {
       res.status(404).send("404 Not Found");
     }
-  } catch (error){
+  } catch (error) {
     res.send(JSON.stringify(error));
   }
-})
+});
 router.get("/entrance-log", (req, res) => {
   try {
     if (isOpenScript) {
@@ -64,17 +67,17 @@ router.get("/entrance-log", (req, res) => {
     res.send(JSON.stringify(error));
   }
 }),
-router.get("/c", (req, res) => {
-  try {
-    if (isOpenScript) {
-      res.sendFile(path.join(__dirname, "public", "client.js"));
-    } else {
-      res.status(404).send("404 Not Found");
+  router.get("/c", (req, res) => {
+    try {
+      if (isOpenScript) {
+        res.sendFile(path.join(__dirname, "public", "client.js"));
+      } else {
+        res.status(404).send("404 Not Found");
+      }
+    } catch (error) {
+      res.send(JSON.stringify(error));
     }
-  } catch (error) {
-    res.send(JSON.stringify(error));
-  }
-});
+  });
 router.get("/toggle", (req, res) => {
   try {
     res.sendFile(path.join(__dirname, "public", "toggle.html"));
