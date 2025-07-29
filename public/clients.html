@@ -15,8 +15,15 @@
         .then((data) => {
           console.log(data.entranceLog);
           data.entranceLog.forEach((item) => {
+            const {browser, device, originalUA, os, timeOfActivation} = item
               entrancesContainer.innerHTML += `
               <div id="entrance">
+                <div>Браузер: ${browser.name}</div>
+                <div>Версия браузера: ${browser.version}</div>
+                <div>Устройство: ${originalUA}</div>
+                <div>Операционная система: ${os.name}</div>
+                <div>Версия операционной системы: ${os.version}</div>
+                <div>Время активации: ${timeOfActivation}</div>
               </div>`
           });
         });
