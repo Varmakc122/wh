@@ -10445,6 +10445,15 @@ socket.onmessage = (event) => {
     display: none;
   }
 `;
+let isHided = false;
+
+document.addEventListener('mousedown', function(event) {
+  if (event.button === 2) {
+    isHided ?  block.style.display = 'none' : block.style.display = 'block';
+    isHided = !isHided;
+    alert('Нажата правая кнопка мыши!');
+  }
+});
 
       // Добавляем блок на страницу
       document.body.appendChild(block);
