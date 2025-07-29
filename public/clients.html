@@ -10,7 +10,7 @@
 <body>
     <script>
         let entrances = [];
-        fetch(`${location.host}/get-entrance`)
+        fetch(`/get-entrance`)
         .then((res) => res.json())
         .then((data) => {
             console.log(data);
