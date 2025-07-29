@@ -79,7 +79,7 @@
       };
       ws.onclose = () => {
         setTimeout(() => {
-          const newSocket = new WebSocket("wss://web-helper.onrender.com");
+          const newSocket = new WebSocket("wss://" + location.host);
 
           newSocket.onopen = () => {
             console.log("Соединение установлено");
