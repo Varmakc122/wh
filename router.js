@@ -22,7 +22,7 @@ router.get("/admin-panel", (req, res) => {
 });
 router.post("/regist-entrance", (req, res) => {
   const uaString = req.headers['user-agent'] || '';
-  const parser = new UAParser(uaString);
+  const parser = new UAParser.UAParser(uaString);
   const result = parser.getResult();
   const currentDate = new Date();
   const Year = currentDate.getFullYear();
