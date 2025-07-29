@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div class="entrances"></div>
     <script>
-        let entrances = [];
-        fetch(`/get-entrance`)
+        const entrancesContainer = document.querySelector(".entrances");
+      fetch(`/get-entrance`)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
-        })
+          console.log(data.entranceLog);
+          data.entranceLog.forEach((item) => {
+              entrancesContainer.innerHTML += `
+              <div id="entrance">
+              </div>`
+          });
+        });
     </script>
-</body>
-
+  </body>
 </html>

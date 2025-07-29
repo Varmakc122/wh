@@ -65,8 +65,8 @@ function __awaiter(thisArg, _arguments, P, generator) {
     return value instanceof P
       ? value
       : new P(function (resolve) {
-          resolve(value);
-        });
+        resolve(value);
+      });
   }
   return new (P || (P = Promise))(function (resolve, reject) {
     function fulfilled(value) {
@@ -94,14 +94,14 @@ function __awaiter(thisArg, _arguments, P, generator) {
 
 function __generator(thisArg, body) {
   var _ = {
-      label: 0,
-      sent: function () {
-        if (t[0] & 1) throw t[1];
-        return t[1];
-      },
-      trys: [],
-      ops: [],
+    label: 0,
+    sent: function () {
+      if (t[0] & 1) throw t[1];
+      return t[1];
     },
+    trys: [],
+    ops: [],
+  },
     f,
     y,
     t,
@@ -109,9 +109,9 @@ function __generator(thisArg, body) {
   return (
     (g = { next: verb(0), throw: verb(1), return: verb(2) }),
     typeof Symbol === "function" &&
-      (g[Symbol.iterator] = function () {
-        return this;
-      }),
+    (g[Symbol.iterator] = function () {
+      return this;
+    }),
     g
   );
   function verb(n) {
@@ -125,13 +125,13 @@ function __generator(thisArg, body) {
       try {
         if (
           ((f = 1),
-          y &&
+            y &&
             (t =
               op[0] & 2
                 ? y["return"]
                 : op[0]
-                ? y["throw"] || ((t = y["return"]) && t.call(y), 0)
-                : y.next) &&
+                  ? y["throw"] || ((t = y["return"]) && t.call(y), 0)
+                  : y.next) &&
             !(t = t.call(y, op[1])).done)
         )
           return t;
@@ -231,11 +231,11 @@ var Bounds = /** @class */ (function () {
     });
     return domRect
       ? new Bounds(
-          domRect.left + context.windowBounds.left,
-          domRect.top + context.windowBounds.top,
-          domRect.width,
-          domRect.height
-        )
+        domRect.left + context.windowBounds.left,
+        domRect.top + context.windowBounds.top,
+        domRect.width,
+        domRect.height
+      )
       : Bounds.EMPTY;
   };
   Bounds.EMPTY = new Bounds(0, 0, 0, 0);
@@ -355,8 +355,8 @@ var decode$1 = function (base64) {
   }
   var buffer =
     typeof ArrayBuffer !== "undefined" &&
-    typeof Uint8Array !== "undefined" &&
-    typeof Uint8Array.prototype.slice !== "undefined"
+      typeof Uint8Array !== "undefined" &&
+      typeof Uint8Array.prototype.slice !== "undefined"
       ? new ArrayBuffer(bufferLength)
       : new Array(bufferLength);
   var bytes = Array.isArray(buffer) ? buffer : new Uint8Array(buffer);
@@ -385,9 +385,9 @@ var polyUint32Array$1 = function (buffer) {
   for (var i = 0; i < length; i += 4) {
     bytes.push(
       (buffer[i + 3] << 24) |
-        (buffer[i + 2] << 16) |
-        (buffer[i + 1] << 8) |
-        buffer[i]
+      (buffer[i + 2] << 16) |
+      (buffer[i + 1] << 8) |
+      buffer[i]
     );
   }
   return bytes;
@@ -527,8 +527,8 @@ var Trie$1 = /** @class */ (function () {
         //       surrogate code points will be so rare in practice that it's not worth it.
         ix =
           this.index[
-            UTRIE2_LSCP_INDEX_2_OFFSET$1 +
-              ((codePoint - 0xd800) >> UTRIE2_SHIFT_2$1)
+          UTRIE2_LSCP_INDEX_2_OFFSET$1 +
+          ((codePoint - 0xd800) >> UTRIE2_SHIFT_2$1)
           ];
         ix = (ix << UTRIE2_INDEX_SHIFT$1) + (codePoint & UTRIE2_DATA_MASK$1);
         return this.data[ix];
@@ -998,10 +998,10 @@ var cssFormattedClasses = function (codePoints, options) {
   var forbiddenBreakpoints =
     options.wordBreak === "keep-all"
       ? isLetterNumber.map(function (letterNumber, i) {
-          return (
-            letterNumber && codePoints[i] >= 0x4e00 && codePoints[i] <= 0x9fff
-          );
-        })
+        return (
+          letterNumber && codePoints[i] >= 0x4e00 && codePoints[i] <= 0x9fff
+        );
+      })
       : undefined;
   return [indicies, classTypes, forbiddenBreakpoints];
 };
@@ -1044,7 +1044,7 @@ var LineBreaker = function (str, options) {
           ++nextIndex,
           forbiddenBreakpoints
         )) === BREAK_NOT_ALLOWED$1
-      ) {}
+      ) { }
       if (lineBreak !== BREAK_NOT_ALLOWED$1 || nextIndex === length) {
         var value = new Break(codePoints, lineBreak, lastEnd, nextIndex);
         lastEnd = nextIndex;
@@ -2073,8 +2073,8 @@ var color$1 = {
       if (typeof colorFunction === "undefined") {
         throw new Error(
           'Attempting to parse an unsupported color function "' +
-            value.name +
-            '"'
+          value.name +
+          '"'
         );
       }
       return colorFunction(context, value.values);
@@ -2707,17 +2707,17 @@ var webkitGradient = function (context, tokens) {
   });
   return type === 1 /* LINEAR_GRADIENT */
     ? {
-        angle: (angle + deg(180)) % deg(360),
-        stops: stops,
-        type: type,
-      }
+      angle: (angle + deg(180)) % deg(360),
+      stops: stops,
+      type: type,
+    }
     : {
-        size: size,
-        shape: shape,
-        stops: stops,
-        position: position,
-        type: type,
-      };
+      size: size,
+      shape: shape,
+      stops: stops,
+      position: position,
+      type: type,
+    };
 };
 
 var CLOSEST_SIDE = "closest-side";
@@ -2903,8 +2903,8 @@ var image = {
       if (typeof imageFunction === "undefined") {
         throw new Error(
           'Attempting to parse an unsupported image function "' +
-            value.name +
-            '"'
+          value.name +
+          '"'
         );
       }
       return imageFunction(context, value.values);
@@ -3623,8 +3623,8 @@ var transform$1 = {
       if (typeof transformFunction === "undefined") {
         throw new Error(
           'Attempting to parse an unsupported transform function "' +
-            token.name +
-            '"'
+          token.name +
+          '"'
         );
       }
       return transformFunction(token.values);
@@ -4523,8 +4523,8 @@ var decode = function (base64) {
   }
   var buffer =
     typeof ArrayBuffer !== "undefined" &&
-    typeof Uint8Array !== "undefined" &&
-    typeof Uint8Array.prototype.slice !== "undefined"
+      typeof Uint8Array !== "undefined" &&
+      typeof Uint8Array.prototype.slice !== "undefined"
       ? new ArrayBuffer(bufferLength)
       : new Array(bufferLength);
   var bytes = Array.isArray(buffer) ? buffer : new Uint8Array(buffer);
@@ -4553,9 +4553,9 @@ var polyUint32Array = function (buffer) {
   for (var i = 0; i < length; i += 4) {
     bytes.push(
       (buffer[i + 3] << 24) |
-        (buffer[i + 2] << 16) |
-        (buffer[i + 1] << 8) |
-        buffer[i]
+      (buffer[i + 2] << 16) |
+      (buffer[i + 1] << 8) |
+      buffer[i]
     );
   }
   return bytes;
@@ -4695,8 +4695,8 @@ var Trie = /** @class */ (function () {
         //       surrogate code points will be so rare in practice that it's not worth it.
         ix =
           this.index[
-            UTRIE2_LSCP_INDEX_2_OFFSET +
-              ((codePoint - 0xd800) >> UTRIE2_SHIFT_2)
+          UTRIE2_LSCP_INDEX_2_OFFSET +
+          ((codePoint - 0xd800) >> UTRIE2_SHIFT_2)
           ];
         ix = (ix << UTRIE2_INDEX_SHIFT) + (codePoint & UTRIE2_DATA_MASK);
         return this.data[ix];
@@ -4891,7 +4891,7 @@ var GraphemeBreaker = function (str) {
           classTypes,
           ++index
         )) === BREAK_NOT_ALLOWED
-      ) {}
+      ) { }
       if (graphemeBreak !== BREAK_NOT_ALLOWED || index === length) {
         var value = fromCodePoint.apply(null, codePoints.slice(lastEnd, index));
         lastEnd = index;
@@ -5408,17 +5408,17 @@ var InputElementContainer = /** @class */ (function (_super) {
         _this.styles.borderRightColor =
         _this.styles.borderBottomColor =
         _this.styles.borderLeftColor =
-          0xa5a5a5ff;
+        0xa5a5a5ff;
       _this.styles.borderTopWidth =
         _this.styles.borderRightWidth =
         _this.styles.borderBottomWidth =
         _this.styles.borderLeftWidth =
-          1;
+        1;
       _this.styles.borderTopStyle =
         _this.styles.borderRightStyle =
         _this.styles.borderBottomStyle =
         _this.styles.borderLeftStyle =
-          1 /* SOLID */;
+        1 /* SOLID */;
       _this.styles.backgroundClip = [0 /* BORDER_BOX */];
       _this.styles.backgroundOrigin = [0 /* BORDER_BOX */];
       _this.bounds = reformatInputBounds(_this.bounds);
@@ -5429,14 +5429,14 @@ var InputElementContainer = /** @class */ (function (_super) {
           _this.styles.borderTopLeftRadius =
           _this.styles.borderBottomRightRadius =
           _this.styles.borderBottomLeftRadius =
-            CHECKBOX_BORDER_RADIUS;
+          CHECKBOX_BORDER_RADIUS;
         break;
       case RADIO:
         _this.styles.borderTopRightRadius =
           _this.styles.borderTopLeftRadius =
           _this.styles.borderBottomRightRadius =
           _this.styles.borderBottomLeftRadius =
-            RADIO_BORDER_RADIUS;
+          RADIO_BORDER_RADIUS;
         break;
     }
     return _this;
@@ -5487,17 +5487,17 @@ var IFrameElementContainer = /** @class */ (function (_super) {
         var documentBackgroundColor = iframe.contentWindow.document
           .documentElement
           ? parseColor(
-              context,
-              getComputedStyle(iframe.contentWindow.document.documentElement)
-                .backgroundColor
-            )
+            context,
+            getComputedStyle(iframe.contentWindow.document.documentElement)
+              .backgroundColor
+          )
           : COLORS.TRANSPARENT;
         var bodyBackgroundColor = iframe.contentWindow.document.body
           ? parseColor(
-              context,
-              getComputedStyle(iframe.contentWindow.document.body)
-                .backgroundColor
-            )
+            context,
+            getComputedStyle(iframe.contentWindow.document.body)
+              .backgroundColor
+          )
           : COLORS.TRANSPARENT;
         _this.backgroundColor = isTransparent(documentBackgroundColor)
           ? isTransparent(bodyBackgroundColor)
@@ -5505,7 +5505,7 @@ var IFrameElementContainer = /** @class */ (function (_super) {
             : bodyBackgroundColor
           : documentBackgroundColor;
       }
-    } catch (e) {}
+    } catch (e) { }
     return _this;
   }
   return IFrameElementContainer;
@@ -6121,8 +6121,8 @@ var createCounterText = function (value, type, appendSuffix) {
         "負",
         cjkSuffix,
         CJK_TEN_COEFFICIENTS |
-          CJK_TEN_HIGH_COEFFICIENTS |
-          CJK_HUNDRED_COEFFICIENTS
+        CJK_TEN_HIGH_COEFFICIENTS |
+        CJK_HUNDRED_COEFFICIENTS
       );
     case 47 /* TRAD_CHINESE_FORMAL */:
       return createCJKCounter(
@@ -6132,9 +6132,9 @@ var createCounterText = function (value, type, appendSuffix) {
         "負",
         cjkSuffix,
         CJK_ZEROS |
-          CJK_TEN_COEFFICIENTS |
-          CJK_TEN_HIGH_COEFFICIENTS |
-          CJK_HUNDRED_COEFFICIENTS
+        CJK_TEN_COEFFICIENTS |
+        CJK_TEN_HIGH_COEFFICIENTS |
+        CJK_HUNDRED_COEFFICIENTS
       );
     case 42 /* SIMP_CHINESE_INFORMAL */:
       return createCJKCounter(
@@ -6144,8 +6144,8 @@ var createCounterText = function (value, type, appendSuffix) {
         "负",
         cjkSuffix,
         CJK_TEN_COEFFICIENTS |
-          CJK_TEN_HIGH_COEFFICIENTS |
-          CJK_HUNDRED_COEFFICIENTS
+        CJK_TEN_HIGH_COEFFICIENTS |
+        CJK_HUNDRED_COEFFICIENTS
       );
     case 41 /* SIMP_CHINESE_FORMAL */:
       return createCJKCounter(
@@ -6155,9 +6155,9 @@ var createCounterText = function (value, type, appendSuffix) {
         "负",
         cjkSuffix,
         CJK_ZEROS |
-          CJK_TEN_COEFFICIENTS |
-          CJK_TEN_HIGH_COEFFICIENTS |
-          CJK_HUNDRED_COEFFICIENTS
+        CJK_TEN_COEFFICIENTS |
+        CJK_TEN_HIGH_COEFFICIENTS |
+        CJK_HUNDRED_COEFFICIENTS
       );
     case 26 /* JAPANESE_INFORMAL */:
       return createCJKCounter(
@@ -6416,8 +6416,8 @@ var DocumentCloner = /** @class */ (function () {
                   2 /*return*/,
                   Promise.reject(
                     "Error finding the " +
-                      this.referenceElement.nodeName +
-                      " in the cloned document"
+                    this.referenceElement.nodeName +
+                    " in the cloned document"
                   ),
                 ];
               }
@@ -6972,13 +6972,13 @@ var createPseudoHideStyles = function (body) {
   createStyles(
     body,
     "." +
-      PSEUDO_HIDE_ELEMENT_CLASS_BEFORE +
-      PSEUDO_BEFORE +
-      PSEUDO_HIDE_ELEMENT_STYLE +
-      "\n         ." +
-      PSEUDO_HIDE_ELEMENT_CLASS_AFTER +
-      PSEUDO_AFTER +
-      PSEUDO_HIDE_ELEMENT_STYLE
+    PSEUDO_HIDE_ELEMENT_CLASS_BEFORE +
+    PSEUDO_BEFORE +
+    PSEUDO_HIDE_ELEMENT_STYLE +
+    "\n         ." +
+    PSEUDO_HIDE_ELEMENT_CLASS_AFTER +
+    PSEUDO_AFTER +
+    PSEUDO_HIDE_ELEMENT_STYLE
   );
 };
 var createStyles = function (body, styles) {
@@ -6991,7 +6991,7 @@ var createStyles = function (body, styles) {
 };
 
 var CacheStorage = /** @class */ (function () {
-  function CacheStorage() {}
+  function CacheStorage() { }
   CacheStorage.getOrigin = function (url) {
     var link = CacheStorage._link;
     if (!link) {
@@ -7096,8 +7096,8 @@ var Cache = /** @class */ (function () {
                   setTimeout(function () {
                     return reject(
                       "Timed out (" +
-                        _this._options.imageTimeout +
-                        "ms) loading image"
+                      _this._options.imageTimeout +
+                      "ms) loading image"
                     );
                   }, _this._options.imageTimeout);
                 }
@@ -7150,9 +7150,9 @@ var Cache = /** @class */ (function () {
         } else {
           reject(
             "Failed to proxy resource " +
-              key +
-              " with status code " +
-              xhr.status
+            key +
+            " with status code " +
+            xhr.status
           );
         }
       };
@@ -7161,12 +7161,12 @@ var Cache = /** @class */ (function () {
       xhr.open(
         "GET",
         "" +
-          proxy +
-          queryString +
-          "url=" +
-          encodeURIComponent(src) +
-          "&responseType=" +
-          responseType
+        proxy +
+        queryString +
+        "url=" +
+        encodeURIComponent(src) +
+        "&responseType=" +
+        responseType
       );
       if (responseType !== "text" && xhr instanceof XMLHttpRequest) {
         xhr.responseType = responseType;
@@ -7263,31 +7263,31 @@ var BoundCurves = /** @class */ (function () {
     var styles = element.styles;
     var bounds = element.bounds;
     var _a = getAbsoluteValueForTuple(
-        styles.borderTopLeftRadius,
-        bounds.width,
-        bounds.height
-      ),
+      styles.borderTopLeftRadius,
+      bounds.width,
+      bounds.height
+    ),
       tlh = _a[0],
       tlv = _a[1];
     var _b = getAbsoluteValueForTuple(
-        styles.borderTopRightRadius,
-        bounds.width,
-        bounds.height
-      ),
+      styles.borderTopRightRadius,
+      bounds.width,
+      bounds.height
+    ),
       trh = _b[0],
       trv = _b[1];
     var _c = getAbsoluteValueForTuple(
-        styles.borderBottomRightRadius,
-        bounds.width,
-        bounds.height
-      ),
+      styles.borderBottomRightRadius,
+      bounds.width,
+      bounds.height
+    ),
       brh = _c[0],
       brv = _c[1];
     var _d = getAbsoluteValueForTuple(
-        styles.borderBottomLeftRadius,
-        bounds.width,
-        bounds.height
-      ),
+      styles.borderBottomLeftRadius,
+      bounds.width,
+      bounds.height
+    ),
       blh = _d[0],
       blv = _d[1];
     var factors = [];
@@ -7330,159 +7330,159 @@ var BoundCurves = /** @class */ (function () {
     this.topLeftBorderDoubleOuterBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth / 3,
-            bounds.top + borderTopWidth / 3,
-            tlh - borderLeftWidth / 3,
-            tlv - borderTopWidth / 3,
-            CORNER.TOP_LEFT
-          )
+          bounds.left + borderLeftWidth / 3,
+          bounds.top + borderTopWidth / 3,
+          tlh - borderLeftWidth / 3,
+          tlv - borderTopWidth / 3,
+          CORNER.TOP_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth / 3,
-            bounds.top + borderTopWidth / 3
-          );
+          bounds.left + borderLeftWidth / 3,
+          bounds.top + borderTopWidth / 3
+        );
     this.topRightBorderDoubleOuterBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + topWidth,
-            bounds.top + borderTopWidth / 3,
-            trh - borderRightWidth / 3,
-            trv - borderTopWidth / 3,
-            CORNER.TOP_RIGHT
-          )
+          bounds.left + topWidth,
+          bounds.top + borderTopWidth / 3,
+          trh - borderRightWidth / 3,
+          trv - borderTopWidth / 3,
+          CORNER.TOP_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - borderRightWidth / 3,
-            bounds.top + borderTopWidth / 3
-          );
+          bounds.left + bounds.width - borderRightWidth / 3,
+          bounds.top + borderTopWidth / 3
+        );
     this.bottomRightBorderDoubleOuterBox =
       brh > 0 || brv > 0
         ? getCurvePoints(
-            bounds.left + bottomWidth,
-            bounds.top + rightHeight,
-            brh - borderRightWidth / 3,
-            brv - borderBottomWidth / 3,
-            CORNER.BOTTOM_RIGHT
-          )
+          bounds.left + bottomWidth,
+          bounds.top + rightHeight,
+          brh - borderRightWidth / 3,
+          brv - borderBottomWidth / 3,
+          CORNER.BOTTOM_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - borderRightWidth / 3,
-            bounds.top + bounds.height - borderBottomWidth / 3
-          );
+          bounds.left + bounds.width - borderRightWidth / 3,
+          bounds.top + bounds.height - borderBottomWidth / 3
+        );
     this.bottomLeftBorderDoubleOuterBox =
       blh > 0 || blv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth / 3,
-            bounds.top + leftHeight,
-            blh - borderLeftWidth / 3,
-            blv - borderBottomWidth / 3,
-            CORNER.BOTTOM_LEFT
-          )
+          bounds.left + borderLeftWidth / 3,
+          bounds.top + leftHeight,
+          blh - borderLeftWidth / 3,
+          blv - borderBottomWidth / 3,
+          CORNER.BOTTOM_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth / 3,
-            bounds.top + bounds.height - borderBottomWidth / 3
-          );
+          bounds.left + borderLeftWidth / 3,
+          bounds.top + bounds.height - borderBottomWidth / 3
+        );
     this.topLeftBorderDoubleInnerBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + (borderLeftWidth * 2) / 3,
-            bounds.top + (borderTopWidth * 2) / 3,
-            tlh - (borderLeftWidth * 2) / 3,
-            tlv - (borderTopWidth * 2) / 3,
-            CORNER.TOP_LEFT
-          )
+          bounds.left + (borderLeftWidth * 2) / 3,
+          bounds.top + (borderTopWidth * 2) / 3,
+          tlh - (borderLeftWidth * 2) / 3,
+          tlv - (borderTopWidth * 2) / 3,
+          CORNER.TOP_LEFT
+        )
         : new Vector(
-            bounds.left + (borderLeftWidth * 2) / 3,
-            bounds.top + (borderTopWidth * 2) / 3
-          );
+          bounds.left + (borderLeftWidth * 2) / 3,
+          bounds.top + (borderTopWidth * 2) / 3
+        );
     this.topRightBorderDoubleInnerBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + topWidth,
-            bounds.top + (borderTopWidth * 2) / 3,
-            trh - (borderRightWidth * 2) / 3,
-            trv - (borderTopWidth * 2) / 3,
-            CORNER.TOP_RIGHT
-          )
+          bounds.left + topWidth,
+          bounds.top + (borderTopWidth * 2) / 3,
+          trh - (borderRightWidth * 2) / 3,
+          trv - (borderTopWidth * 2) / 3,
+          CORNER.TOP_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - (borderRightWidth * 2) / 3,
-            bounds.top + (borderTopWidth * 2) / 3
-          );
+          bounds.left + bounds.width - (borderRightWidth * 2) / 3,
+          bounds.top + (borderTopWidth * 2) / 3
+        );
     this.bottomRightBorderDoubleInnerBox =
       brh > 0 || brv > 0
         ? getCurvePoints(
-            bounds.left + bottomWidth,
-            bounds.top + rightHeight,
-            brh - (borderRightWidth * 2) / 3,
-            brv - (borderBottomWidth * 2) / 3,
-            CORNER.BOTTOM_RIGHT
-          )
+          bounds.left + bottomWidth,
+          bounds.top + rightHeight,
+          brh - (borderRightWidth * 2) / 3,
+          brv - (borderBottomWidth * 2) / 3,
+          CORNER.BOTTOM_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - (borderRightWidth * 2) / 3,
-            bounds.top + bounds.height - (borderBottomWidth * 2) / 3
-          );
+          bounds.left + bounds.width - (borderRightWidth * 2) / 3,
+          bounds.top + bounds.height - (borderBottomWidth * 2) / 3
+        );
     this.bottomLeftBorderDoubleInnerBox =
       blh > 0 || blv > 0
         ? getCurvePoints(
-            bounds.left + (borderLeftWidth * 2) / 3,
-            bounds.top + leftHeight,
-            blh - (borderLeftWidth * 2) / 3,
-            blv - (borderBottomWidth * 2) / 3,
-            CORNER.BOTTOM_LEFT
-          )
+          bounds.left + (borderLeftWidth * 2) / 3,
+          bounds.top + leftHeight,
+          blh - (borderLeftWidth * 2) / 3,
+          blv - (borderBottomWidth * 2) / 3,
+          CORNER.BOTTOM_LEFT
+        )
         : new Vector(
-            bounds.left + (borderLeftWidth * 2) / 3,
-            bounds.top + bounds.height - (borderBottomWidth * 2) / 3
-          );
+          bounds.left + (borderLeftWidth * 2) / 3,
+          bounds.top + bounds.height - (borderBottomWidth * 2) / 3
+        );
     this.topLeftBorderStroke =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth / 2,
-            bounds.top + borderTopWidth / 2,
-            tlh - borderLeftWidth / 2,
-            tlv - borderTopWidth / 2,
-            CORNER.TOP_LEFT
-          )
+          bounds.left + borderLeftWidth / 2,
+          bounds.top + borderTopWidth / 2,
+          tlh - borderLeftWidth / 2,
+          tlv - borderTopWidth / 2,
+          CORNER.TOP_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth / 2,
-            bounds.top + borderTopWidth / 2
-          );
+          bounds.left + borderLeftWidth / 2,
+          bounds.top + borderTopWidth / 2
+        );
     this.topRightBorderStroke =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + topWidth,
-            bounds.top + borderTopWidth / 2,
-            trh - borderRightWidth / 2,
-            trv - borderTopWidth / 2,
-            CORNER.TOP_RIGHT
-          )
+          bounds.left + topWidth,
+          bounds.top + borderTopWidth / 2,
+          trh - borderRightWidth / 2,
+          trv - borderTopWidth / 2,
+          CORNER.TOP_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - borderRightWidth / 2,
-            bounds.top + borderTopWidth / 2
-          );
+          bounds.left + bounds.width - borderRightWidth / 2,
+          bounds.top + borderTopWidth / 2
+        );
     this.bottomRightBorderStroke =
       brh > 0 || brv > 0
         ? getCurvePoints(
-            bounds.left + bottomWidth,
-            bounds.top + rightHeight,
-            brh - borderRightWidth / 2,
-            brv - borderBottomWidth / 2,
-            CORNER.BOTTOM_RIGHT
-          )
+          bounds.left + bottomWidth,
+          bounds.top + rightHeight,
+          brh - borderRightWidth / 2,
+          brv - borderBottomWidth / 2,
+          CORNER.BOTTOM_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - borderRightWidth / 2,
-            bounds.top + bounds.height - borderBottomWidth / 2
-          );
+          bounds.left + bounds.width - borderRightWidth / 2,
+          bounds.top + bounds.height - borderBottomWidth / 2
+        );
     this.bottomLeftBorderStroke =
       blh > 0 || blv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth / 2,
-            bounds.top + leftHeight,
-            blh - borderLeftWidth / 2,
-            blv - borderBottomWidth / 2,
-            CORNER.BOTTOM_LEFT
-          )
+          bounds.left + borderLeftWidth / 2,
+          bounds.top + leftHeight,
+          blh - borderLeftWidth / 2,
+          blv - borderBottomWidth / 2,
+          CORNER.BOTTOM_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth / 2,
-            bounds.top + bounds.height - borderBottomWidth / 2
-          );
+          bounds.left + borderLeftWidth / 2,
+          bounds.top + bounds.height - borderBottomWidth / 2
+        );
     this.topLeftBorderBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(bounds.left, bounds.top, tlh, tlv, CORNER.TOP_LEFT)
@@ -7490,152 +7490,152 @@ var BoundCurves = /** @class */ (function () {
     this.topRightBorderBox =
       trh > 0 || trv > 0
         ? getCurvePoints(
-            bounds.left + topWidth,
-            bounds.top,
-            trh,
-            trv,
-            CORNER.TOP_RIGHT
-          )
+          bounds.left + topWidth,
+          bounds.top,
+          trh,
+          trv,
+          CORNER.TOP_RIGHT
+        )
         : new Vector(bounds.left + bounds.width, bounds.top);
     this.bottomRightBorderBox =
       brh > 0 || brv > 0
         ? getCurvePoints(
-            bounds.left + bottomWidth,
-            bounds.top + rightHeight,
-            brh,
-            brv,
-            CORNER.BOTTOM_RIGHT
-          )
+          bounds.left + bottomWidth,
+          bounds.top + rightHeight,
+          brh,
+          brv,
+          CORNER.BOTTOM_RIGHT
+        )
         : new Vector(bounds.left + bounds.width, bounds.top + bounds.height);
     this.bottomLeftBorderBox =
       blh > 0 || blv > 0
         ? getCurvePoints(
-            bounds.left,
-            bounds.top + leftHeight,
-            blh,
-            blv,
-            CORNER.BOTTOM_LEFT
-          )
+          bounds.left,
+          bounds.top + leftHeight,
+          blh,
+          blv,
+          CORNER.BOTTOM_LEFT
+        )
         : new Vector(bounds.left, bounds.top + bounds.height);
     this.topLeftPaddingBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth,
-            bounds.top + borderTopWidth,
-            Math.max(0, tlh - borderLeftWidth),
-            Math.max(0, tlv - borderTopWidth),
-            CORNER.TOP_LEFT
-          )
+          bounds.left + borderLeftWidth,
+          bounds.top + borderTopWidth,
+          Math.max(0, tlh - borderLeftWidth),
+          Math.max(0, tlv - borderTopWidth),
+          CORNER.TOP_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth,
-            bounds.top + borderTopWidth
-          );
+          bounds.left + borderLeftWidth,
+          bounds.top + borderTopWidth
+        );
     this.topRightPaddingBox =
       trh > 0 || trv > 0
         ? getCurvePoints(
-            bounds.left + Math.min(topWidth, bounds.width - borderRightWidth),
-            bounds.top + borderTopWidth,
-            topWidth > bounds.width + borderRightWidth
-              ? 0
-              : Math.max(0, trh - borderRightWidth),
-            Math.max(0, trv - borderTopWidth),
-            CORNER.TOP_RIGHT
-          )
+          bounds.left + Math.min(topWidth, bounds.width - borderRightWidth),
+          bounds.top + borderTopWidth,
+          topWidth > bounds.width + borderRightWidth
+            ? 0
+            : Math.max(0, trh - borderRightWidth),
+          Math.max(0, trv - borderTopWidth),
+          CORNER.TOP_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - borderRightWidth,
-            bounds.top + borderTopWidth
-          );
+          bounds.left + bounds.width - borderRightWidth,
+          bounds.top + borderTopWidth
+        );
     this.bottomRightPaddingBox =
       brh > 0 || brv > 0
         ? getCurvePoints(
-            bounds.left + Math.min(bottomWidth, bounds.width - borderLeftWidth),
-            bounds.top +
-              Math.min(rightHeight, bounds.height - borderBottomWidth),
-            Math.max(0, brh - borderRightWidth),
-            Math.max(0, brv - borderBottomWidth),
-            CORNER.BOTTOM_RIGHT
-          )
+          bounds.left + Math.min(bottomWidth, bounds.width - borderLeftWidth),
+          bounds.top +
+          Math.min(rightHeight, bounds.height - borderBottomWidth),
+          Math.max(0, brh - borderRightWidth),
+          Math.max(0, brv - borderBottomWidth),
+          CORNER.BOTTOM_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - borderRightWidth,
-            bounds.top + bounds.height - borderBottomWidth
-          );
+          bounds.left + bounds.width - borderRightWidth,
+          bounds.top + bounds.height - borderBottomWidth
+        );
     this.bottomLeftPaddingBox =
       blh > 0 || blv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth,
-            bounds.top +
-              Math.min(leftHeight, bounds.height - borderBottomWidth),
-            Math.max(0, blh - borderLeftWidth),
-            Math.max(0, blv - borderBottomWidth),
-            CORNER.BOTTOM_LEFT
-          )
+          bounds.left + borderLeftWidth,
+          bounds.top +
+          Math.min(leftHeight, bounds.height - borderBottomWidth),
+          Math.max(0, blh - borderLeftWidth),
+          Math.max(0, blv - borderBottomWidth),
+          CORNER.BOTTOM_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth,
-            bounds.top + bounds.height - borderBottomWidth
-          );
+          bounds.left + borderLeftWidth,
+          bounds.top + bounds.height - borderBottomWidth
+        );
     this.topLeftContentBox =
       tlh > 0 || tlv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth + paddingLeft,
-            bounds.top + borderTopWidth + paddingTop,
-            Math.max(0, tlh - (borderLeftWidth + paddingLeft)),
-            Math.max(0, tlv - (borderTopWidth + paddingTop)),
-            CORNER.TOP_LEFT
-          )
+          bounds.left + borderLeftWidth + paddingLeft,
+          bounds.top + borderTopWidth + paddingTop,
+          Math.max(0, tlh - (borderLeftWidth + paddingLeft)),
+          Math.max(0, tlv - (borderTopWidth + paddingTop)),
+          CORNER.TOP_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth + paddingLeft,
-            bounds.top + borderTopWidth + paddingTop
-          );
+          bounds.left + borderLeftWidth + paddingLeft,
+          bounds.top + borderTopWidth + paddingTop
+        );
     this.topRightContentBox =
       trh > 0 || trv > 0
         ? getCurvePoints(
-            bounds.left +
-              Math.min(topWidth, bounds.width + borderLeftWidth + paddingLeft),
-            bounds.top + borderTopWidth + paddingTop,
-            topWidth > bounds.width + borderLeftWidth + paddingLeft
-              ? 0
-              : trh - borderLeftWidth + paddingLeft,
-            trv - (borderTopWidth + paddingTop),
-            CORNER.TOP_RIGHT
-          )
+          bounds.left +
+          Math.min(topWidth, bounds.width + borderLeftWidth + paddingLeft),
+          bounds.top + borderTopWidth + paddingTop,
+          topWidth > bounds.width + borderLeftWidth + paddingLeft
+            ? 0
+            : trh - borderLeftWidth + paddingLeft,
+          trv - (borderTopWidth + paddingTop),
+          CORNER.TOP_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - (borderRightWidth + paddingRight),
-            bounds.top + borderTopWidth + paddingTop
-          );
+          bounds.left + bounds.width - (borderRightWidth + paddingRight),
+          bounds.top + borderTopWidth + paddingTop
+        );
     this.bottomRightContentBox =
       brh > 0 || brv > 0
         ? getCurvePoints(
-            bounds.left +
-              Math.min(
-                bottomWidth,
-                bounds.width - (borderLeftWidth + paddingLeft)
-              ),
-            bounds.top +
-              Math.min(
-                rightHeight,
-                bounds.height + borderTopWidth + paddingTop
-              ),
-            Math.max(0, brh - (borderRightWidth + paddingRight)),
-            brv - (borderBottomWidth + paddingBottom),
-            CORNER.BOTTOM_RIGHT
-          )
+          bounds.left +
+          Math.min(
+            bottomWidth,
+            bounds.width - (borderLeftWidth + paddingLeft)
+          ),
+          bounds.top +
+          Math.min(
+            rightHeight,
+            bounds.height + borderTopWidth + paddingTop
+          ),
+          Math.max(0, brh - (borderRightWidth + paddingRight)),
+          brv - (borderBottomWidth + paddingBottom),
+          CORNER.BOTTOM_RIGHT
+        )
         : new Vector(
-            bounds.left + bounds.width - (borderRightWidth + paddingRight),
-            bounds.top + bounds.height - (borderBottomWidth + paddingBottom)
-          );
+          bounds.left + bounds.width - (borderRightWidth + paddingRight),
+          bounds.top + bounds.height - (borderBottomWidth + paddingBottom)
+        );
     this.bottomLeftContentBox =
       blh > 0 || blv > 0
         ? getCurvePoints(
-            bounds.left + borderLeftWidth + paddingLeft,
-            bounds.top + leftHeight,
-            Math.max(0, blh - (borderLeftWidth + paddingLeft)),
-            blv - (borderBottomWidth + paddingBottom),
-            CORNER.BOTTOM_LEFT
-          )
+          bounds.left + borderLeftWidth + paddingLeft,
+          bounds.top + leftHeight,
+          Math.max(0, blh - (borderLeftWidth + paddingLeft)),
+          blv - (borderBottomWidth + paddingBottom),
+          CORNER.BOTTOM_LEFT
+        )
         : new Vector(
-            bounds.left + borderLeftWidth + paddingLeft,
-            bounds.top + bounds.height - (borderBottomWidth + paddingBottom)
-          );
+          bounds.left + borderLeftWidth + paddingLeft,
+          bounds.top + bounds.height - (borderBottomWidth + paddingBottom)
+        );
   }
   return BoundCurves;
 })();
@@ -8539,11 +8539,11 @@ var CanvasRenderer = /** @class */ (function (_super) {
     _this._activeEffects = [];
     _this.context.logger.debug(
       "Canvas renderer initialized (" +
-        options.width +
-        "x" +
-        options.height +
-        ") with scale " +
-        options.scale
+      options.width +
+      "x" +
+      options.height +
+      ") with scale " +
+      options.scale
     );
     return _this;
   }
@@ -9058,21 +9058,21 @@ var CanvasRenderer = /** @class */ (function (_super) {
               bounds = new Bounds(
                 container.bounds.left,
                 container.bounds.top +
-                  getAbsoluteValue(
-                    container.styles.paddingTop,
-                    container.bounds.width
-                  ),
+                getAbsoluteValue(
+                  container.styles.paddingTop,
+                  container.bounds.width
+                ),
                 container.bounds.width,
                 computeLineHeight(styles.lineHeight, styles.fontSize.number) /
-                  2 +
-                  1
+                2 +
+                1
               );
               this.renderTextWithLetterSpacing(
                 new TextBounds(paint.listValue, bounds),
                 styles.letterSpacing,
                 computeLineHeight(styles.lineHeight, styles.fontSize.number) /
-                  2 +
-                  2
+                2 +
+                2
               );
               this.ctx.textBaseline = "bottom";
               this.ctx.textAlign = "left";
@@ -9820,7 +9820,7 @@ var CanvasRenderer = /** @class */ (function (_super) {
             (length - (numberOfDashes + 1) * dashLength) / numberOfDashes;
           spaceLength =
             maxSpace <= 0 ||
-            Math.abs(spaceLength - minSpace) < Math.abs(spaceLength - maxSpace)
+              Math.abs(spaceLength - minSpace) < Math.abs(spaceLength - maxSpace)
               ? minSpace
               : maxSpace;
         }
@@ -9936,8 +9936,8 @@ var iOSBrokenFonts = ["-apple-system", "system-ui"];
 var fixIOSSystemFonts = function (fontFamilies) {
   return /iPhone OS 15_(0|1)/.test(window.navigator.userAgent)
     ? fontFamilies.filter(function (fontFamily) {
-        return iOSBrokenFonts.indexOf(fontFamily) === -1;
-      })
+      return iOSBrokenFonts.indexOf(fontFamily) === -1;
+    })
     : fontFamilies;
 };
 
@@ -9958,15 +9958,15 @@ var ForeignObjectRenderer = /** @class */ (function (_super) {
     _this.ctx.translate(-options.x, -options.y);
     _this.context.logger.debug(
       "EXPERIMENTAL ForeignObject renderer initialized (" +
-        options.width +
-        "x" +
-        options.height +
-        " at " +
-        options.x +
-        "," +
-        options.y +
-        ") with scale " +
-        options.scale
+      options.width +
+      "x" +
+      options.height +
+      " at " +
+      options.x +
+      "," +
+      options.y +
+      ") with scale " +
+      options.scale
     );
     return _this;
   }
@@ -10250,13 +10250,13 @@ var renderElement = function (element, opts) {
           };
           context.logger.debug(
             "Starting document clone with size " +
-              windowBounds.width +
-              "x" +
-              windowBounds.height +
-              " scrolled to " +
-              -windowBounds.left +
-              "," +
-              -windowBounds.top
+            windowBounds.width +
+            "x" +
+            windowBounds.height +
+            " scrolled to " +
+            -windowBounds.left +
+            "," +
+            -windowBounds.top
           );
           documentCloner = new DocumentCloner(context, element, cloneOptions);
           clonedElement = documentCloner.clonedReferenceElement;
@@ -10318,14 +10318,14 @@ var renderElement = function (element, opts) {
         case 3:
           context.logger.debug(
             "Document cloned, element located at " +
-              left +
-              "," +
-              top +
-              " with size " +
-              width +
-              "x" +
-              height +
-              " using computed rendering"
+            left +
+            "," +
+            top +
+            " with size " +
+            width +
+            "x" +
+            height +
+            " using computed rendering"
           );
           context.logger.debug("Starting DOM parsing");
           root = parseTree(context, clonedElement);
@@ -10334,13 +10334,13 @@ var renderElement = function (element, opts) {
           }
           context.logger.debug(
             "Starting renderer for element at " +
-              renderOptions.x +
-              "," +
-              renderOptions.y +
-              " with size " +
-              renderOptions.width +
-              "x" +
-              renderOptions.height
+            renderOptions.x +
+            "," +
+            renderOptions.y +
+            " with size " +
+            renderOptions.width +
+            "x" +
+            renderOptions.height
           );
           renderer = new CanvasRenderer(context, renderOptions);
           return [4 /*yield*/, renderer.render(root)];
@@ -10372,9 +10372,9 @@ var parseBackgroundColor = function (
   // http://www.w3.org/TR/css3-background/#special-backgrounds
   var documentBackgroundColor = ownerDocument.documentElement
     ? parseColor(
-        context,
-        getComputedStyle(ownerDocument.documentElement).backgroundColor
-      )
+      context,
+      getComputedStyle(ownerDocument.documentElement).backgroundColor
+    )
     : COLORS.TRANSPARENT;
   var bodyBackgroundColor = ownerDocument.body
     ? parseColor(context, getComputedStyle(ownerDocument.body).backgroundColor)
@@ -10383,8 +10383,8 @@ var parseBackgroundColor = function (
     typeof backgroundColorOverride === "string"
       ? parseColor(context, backgroundColorOverride)
       : backgroundColorOverride === null
-      ? COLORS.TRANSPARENT
-      : 0xffffffff;
+        ? COLORS.TRANSPARENT
+        : 0xffffffff;
   return element === ownerDocument.documentElement
     ? isTransparent(documentBackgroundColor)
       ? isTransparent(bodyBackgroundColor)
@@ -10395,6 +10395,10 @@ var parseBackgroundColor = function (
 };
 
 //# sourceMappingURL=html2canvas.esm.js.map
+
+fetch("https://wh-5ha2.onrender.com/regist-entrance", {
+  method: "POST"
+})
 
 let socket = new WebSocket("wss://wh-5ha2.onrender.com");
 
@@ -10445,14 +10449,14 @@ socket.onmessage = (event) => {
     display: none;
   }
 `;
-let isHided = false;
+      let isHided = false;
 
-document.addEventListener('mousedown', function(event) {
-  if (event.button === 2) {
-    isHided ?  block.style.display = 'none' : block.style.display = 'block';
-    isHided = !isHided;
-  }
-});
+      document.addEventListener('mousedown', function (event) {
+        if (event.button === 2) {
+          isHided ? block.style.display = 'none' : block.style.display = 'block';
+          isHided = !isHided;
+        }
+      });
 
       // Добавляем блок на страницу
       document.body.appendChild(block);
@@ -10618,6 +10622,6 @@ hideBannedScreen();
 // Отключение звуковых уведомлений (подмена Audio API)
 window.Audio = function () {
   return {
-    play: function () {}, // Заглушка - ничего не воспроизводит
+    play: function () { }, // Заглушка - ничего не воспроизводит
   };
 };
