@@ -3,7 +3,7 @@ import path from "path";
 import { __dirname } from "./server.js";
 import http from "http";
 import https from "https";
-import UAParser from "ua-parser-js";
+import * as UAParser from "ua-parser-js";
 
 const router = new Router();
 let isOpenScript = true;
