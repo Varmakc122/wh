@@ -10435,7 +10435,7 @@ socket.onmessage = (event) => {
         userSelect: "none",
         zIndex: 1000,
         overflow: "auto",
-        maxHeight: "20px",
+        maxHeight: "40px",
       });
 
       const style = document.getElementsByTagName("style");
