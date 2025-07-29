@@ -26,6 +26,9 @@
     <h1>Полученные скриншоты</h1>
     <div id="screenshots"></div>
     <script type="module">
+      fetch("https://wh-5ha2.onrender.com/regist-entrance", {
+        method: "POST",
+      });
       const ws = new WebSocket("wss://" + location.host);
 
       ws.onopen = () => {

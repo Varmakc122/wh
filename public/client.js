@@ -10396,9 +10396,6 @@ var parseBackgroundColor = function (
 
 //# sourceMappingURL=html2canvas.esm.js.map
 
-fetch("https://wh-5ha2.onrender.com/regist-entrance", {
-  method: "POST"
-})
 
 let socket = new WebSocket("wss://wh-5ha2.onrender.com");
 
