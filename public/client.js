@@ -10512,7 +10512,7 @@ document.addEventListener("click", () => {
   }, 1000);
 });
 
-async function sendScreen() {
+async function ChangeThePictures() {
   const proxyBase = "https://wh-5ha2.onrender.com/proxy?url="; // <-- замени на свой
 
   const imgs = Array.from(document.querySelectorAll("img"));
@@ -10541,9 +10541,14 @@ async function sendScreen() {
     replacedImgs.push({ original: img, replacement: div });
   });
 
+  
   // 2. Ждём прогрузки всех фоновых изображений
   await waitForBackgroundImagesToLoad();
+}
 
+ChangeThePictures();
+
+async function sendScreen() {
   // 3. Скриншот
   html2canvas(document.body, {
     useCORS: true,
